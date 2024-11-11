@@ -17,11 +17,11 @@ public class FormaTest1 {
 
     @BeforeClass
     public void beforeClass() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\webdriver\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
+//        System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\webdriver\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--remote-allow-origins=*");
+//        driver = new ChromeDriver(options);
+//        driver.manage().window().maximize();
 
         driver = SeleniumDriver.getRemoteDriver();
 
