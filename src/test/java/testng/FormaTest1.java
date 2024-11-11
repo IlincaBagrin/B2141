@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import utils.SeleniumDriver;
 
 public class FormaTest1 {
     public static WebDriver driver;
@@ -21,6 +22,8 @@ public class FormaTest1 {
         options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
+
+        driver = SeleniumDriver.getRemoteDriver();
 
 
     }
