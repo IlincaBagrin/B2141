@@ -1,6 +1,7 @@
 package testng;
 
 import demoga.FormaPage1;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -10,6 +11,8 @@ import org.testng.annotations.Test;
 
 public class FormaTest1 {
     public static WebDriver driver;
+
+    public static Logger logger = Logger.getLogger(FormaTest1.class);
 
     @BeforeClass
     public void beforeClass() {
@@ -23,11 +26,14 @@ public class FormaTest1 {
     }
 
     @Test
-    public void FormaTest(){
+    public void FormaTest() throws InterruptedException {
+        logger.info("Start Test");
         driver.get("https://demoqa.com/automation-practice-form");
         FormaPage1 formaPage = new FormaPage1(driver);
         formaPage.setFirstName("Anatolie");
+        Thread.sleep(2000);
         formaPage.setLastName("Anatolie");
+        Thread.sleep(2000);
 
 
     }
